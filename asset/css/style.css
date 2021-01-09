@@ -93,7 +93,7 @@
   --color-clear: #fff;
   --color-shadow: transparent;
   --color-error: #a52a2a;
-  --color-body-back: url("https://source.unsplash.com/1920x1080/?wallpaper");
+  --color-body-back: url("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/1216dd71-38a8-4709-aa99-ed960374f7e8.gif");
   --color-header-text: #000;
   --color-header-background: #fff;
   --color-spinner-front: #000;
@@ -428,7 +428,7 @@ a {
   background-color: var(--color-link);
   background-image: url("https://cdn.jsdelivr.net/gh/jinyaoMa/my-hexo-site/asset/img/cover.background.png");
   background-repeat: no-repeat;
-  background-size: 100vmin;
+  background-size: 50vmin;
   background-position: center;
   transition: opacity 0.3s;
   z-index: 999999999;
@@ -867,7 +867,7 @@ a {
   display: none;
 }
 :root.colorful:not(.night) body:before {
-  content: '图片 Picture API: https://source.unsplash.com/1920x1080/?wallpaper';
+  content: "";
   position: fixed;
   top: 0;
   z-index: -1;
