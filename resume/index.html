@@ -19,11 +19,19 @@
   <link rel="manifest" href="/manifest.json">
   <title>Resume Tips / 简历小贴士 - 德丽莎</title>
   
-  <script nomodule async src="/asset/js/nomodule.js?t=1610185396353"></script>
+  <script nomodule async src="/asset/js/nomodule.js?t=1610185999643"></script>
   
-  <link rel="stylesheet" href="/asset/css/style.css?t=1610185396351">
-  <script type="module" src="/asset/js/main.js?t=1610185396352"></script>
+  <link rel="stylesheet" href="/asset/css/style.css?t=1610185999642">
+  <script type="module" src="/asset/js/main.js?t=1610185999643"></script>
   
+<!-- 爆炸红心效果 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/firework.js"></script>
+<!-- 樱花特效 -->
+  {% if theme.sakura.enable %}
+      <script async src="/js/src/fairyDustCursor.js"></script>
+  {% endif %}
 <meta name="generator" content="Hexo 5.3.0"></head>
 
 <body>
