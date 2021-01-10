@@ -21,7 +21,7 @@ self.addEventListener('active', function () {
 });
 
 var precacheUrls = [
-'/','/posts/36215/','/posts/22164/','/about/index.html','/artitalk/index.html','/extension/content.json','/gallery/index.html','/icons/index.html','/letter/index.html','/library/index.html','/records/content.json','/resume/index.html','/records/index.html','/extension/letter/index.js','/extension/letter/index.css','/extension/test/index.html','/extension/resume/index.css','/extension/resume/index.js','/extension/letter/chinese/data.json','/extension/letter/chinese/index.html','/extension/letter/english/data.json','/extension/letter/english/index.html','/extension/resume/chinese/data.json','/extension/resume/english/index.html','/extension/resume/chinese/index.html','/extension/resume/english/data.json',
+'/','/posts/36215/','/posts/22164/','/about/index.html','/artitalk/重要の事.html','/gallery/index.html','/extension/content.json','/icons/index.html','/letter/index.html','/library/index.html','/records/index.html','/records/content.json','/resume/index.html','/extension/letter/index.js','/extension/letter/index.css','/extension/resume/index.js','/extension/resume/index.css','/extension/test/index.html','/extension/letter/english/index.html','/extension/letter/english/data.json','/extension/letter/chinese/data.json','/extension/letter/chinese/index.html','/extension/resume/english/data.json','/extension/resume/english/index.html','/extension/resume/chinese/index.html','/extension/resume/chinese/data.json',
 ];
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
