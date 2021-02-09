@@ -6,7 +6,7 @@
   <link href="http://q2418100271.github.io/atom.xml" rel="self"/>
   
   <link href="http://q2418100271.github.io/"/>
-  <updated>2021-02-09T11:29:44.281Z</updated>
+  <updated>2021-02-09T12:05:56.212Z</updated>
   <id>http://q2418100271.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图片隐写</title>
+    <link href="http://q2418100271.github.io/posts/55344/"/>
+    <id>http://q2418100271.github.io/posts/55344/</id>
+    <published>2021-02-09T11:48:24.000Z</published>
+    <updated>2021-02-09T12:05:56.212Z</updated>
+    
+    <content type="html"><![CDATA[<p>Misc 为英文 miscellaneous 的前四个字母，<br>杂项、混合体、大杂烩的意思。<br>主要类型：<br>1. 数据编码 / 图形密码<br>2. 图片隐写<br>3. 音频 &amp; 视频隐写</p><p>4. 流量分析<br>5. 内存取证 6. 游戏隐写.</p><h2 id="使用工具：010editor；kali"><a href="# 使用工具：010editor；kali" class="headerlink" title="使用工具：010editor；kali"></a>使用工具：010editor；kali</h2><h2 id="图片隐写分类"><a href="# 图片隐写分类" class="headerlink" title="图片隐写分类"></a>图片隐写分类 </h2><h3 id="属性"><a href="# 属性" class="headerlink" title="属性"></a> 属性 </h3><h3 id="文件末尾藏字符串"><a href="# 文件末尾藏字符串" class="headerlink" title="文件末尾藏字符串"></a> 文件末尾藏字符串 </h3><h3 id="文件包含"><a href="# 文件包含" class="headerlink" title="文件包含"></a> 文件包含 </h3><h3 id="修改文件头"><a href="# 修改文件头" class="headerlink" title="修改文件头"></a> 修改文件头 </h3><h3 id="GIF"><a href="#GIF" class="headerlink" title="GIF"></a>GIF</h3><h3 id="PNG-bmp"><a href="#PNG-bmp" class="headerlink" title="PNG(bmp)"></a>PNG(bmp)</h3><h3 id="jpg"><a href="#jpg" class="headerlink" title="jpg"></a>jpg</h3><h3 id="双图隐写"><a href="# 双图隐写" class="headerlink" title="双图隐写"></a> 双图隐写 </h3><h3 id="stegpy"><a href="#stegpy" class="headerlink" title="stegpy"></a>stegpy</h3><h3 id="silenteye"><a href="#silenteye" class="headerlink" title="silenteye"></a>silenteye</h3><h2 id="详细分类"><a href="# 详细分类" class="headerlink" title="详细分类"></a> 详细分类 </h2><h3 id="右击属性"><a href="# 右击属性" class="headerlink" title="右击属性"></a> 右击属性</h3><p><img src="/images/image-20210209200549424.png" alt="image-20210209200549424"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Misc 为英文 miscellaneous 的前四个字母，&lt;br&gt;杂项、混合体、大杂烩的意思。&lt;br&gt;主要类型：&lt;br&gt;1. 数据编码 / 图形密码&lt;br&gt;2. 图片隐写&lt;br&gt;3. 音频 &amp;amp; 视频隐写&lt;/p&gt;
+&lt;p&gt;4. 流量分析&lt;br&gt;5. 内存取证 6. 游</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>黑苹果 win 双系统安装</title>
