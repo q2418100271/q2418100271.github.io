@@ -6,7 +6,7 @@
   <link href="http://q2418100271.github.io/atom.xml" rel="self"/>
   
   <link href="http://q2418100271.github.io/"/>
-  <updated>2021-02-09T15:31:51.138Z</updated>
+  <updated>2021-02-10T02:22:12.484Z</updated>
   <id>http://q2418100271.github.io/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>图片隐写</title>
-    <link href="http://q2418100271.github.io/posts/55344/"/>
-    <id>http://q2418100271.github.io/posts/55344/</id>
-    <published>2021-02-09T11:48:24.000Z</published>
-    <updated>2021-02-09T15:31:51.138Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="隐写图片"><a href="# 隐写图片" class="headerlink" title="隐写图片"></a>隐写图片 </h1><p>Misc 为英文 miscellaneous 的前四个字母，<br> 杂项、混合体、大杂烩的意思。<br>主要类型：<br>1. 数据编码 / 图形密码<br>2. 图片隐写<br>3. 音频 &amp; 视频隐写</p><p>4. 流量分析<br>5. 内存取证 6. 游戏隐写.</p><h2 id="使用工具：010editor；kali"><a href="# 使用工具：010editor；kali" class="headerlink" title="使用工具：010editor；kali"></a>使用工具：010editor；kali</h2><h2 id="图片隐写分类"><a href="# 图片隐写分类" class="headerlink" title="图片隐写分类"></a>图片隐写分类 </h2><p> 属性</p><p>文件末尾藏字符串</p><p>文件包含</p><p>修改文件头</p><p>GIF</p><p>PNG(bmp)</p><p>jpg</p><p>双图隐写</p><p>stegpy</p><p>silenteye</p><h2 id="详细分类"><a href="# 详细分类" class="headerlink" title="详细分类"></a>详细分类 </h2><h3 id="右击属性"><a href="# 右击属性" class="headerlink" title="右击属性"></a> 右击属性</h3><p><img src="/images/image-20210209200549424.png" alt="image-20210209200549424"></p><h3 id="文件十六进制藏有字符串"><a href="# 文件十六进制藏有字符串" class="headerlink" title="文件十六进制藏有字符串"></a>文件十六进制藏有字符串</h3><p><img src="/images/image-20210209202404086.png" alt="image-20210209202404086"></p><h3 id="文件包含"><a href="# 文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p>binwalk 分离文件</p><p><img src="/images/image-20210209203041076.png" alt="image-20210209203041076"></p><p>可以看到效果从 271007 块偏移开始就是另一张 jpg</p><p><strong>使用 foremost 工具分离</strong></p><p>foremost 是一个基于文件文件头和尾部信息以及文件的内建数据结构恢复文件的命令行工具，win 可以下载地址，Linux 可以 <br> 通过下面命令安装 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install foremost</span><br></pre></td></tr></table></figure><p><img src="/images/image-20210209203315763.png" alt="image-20210209203315763"></p><p>安装 foremost 后你可以使用 foremost -help 查看使用帮助，这里最简单分离文件的命令为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foremost carter.jpg </span><br></pre></td></tr></table></figure><p>当我们使用这行命令后，foremost 会自动生成 output 目录存放分离出文件：</p><p><img src="/images/image-20210209203552735.png" alt="image-20210209203552735"></p><p>可以得到隐藏图片</p><h3 id="修改文件头"><a href="# 修改文件头" class="headerlink" title="修改文件头"></a>修改文件头</h3><p><img src="/images/image-20210209222755980.png" alt="image-20210209222755980"></p><p>JPEG (jpg)， 文件头：FFD8FF</p><p>PNG (png)， 文件头：89504E47</p><p>GIF (gif)， 文件头：47494638</p><p>TIFF (tif)， 文件头：49492A00</p><p>Windows Bitmap (bmp)，文件头：424D</p><p>CAD (dwg)， 文件头：41433130</p><p>Adobe Photoshop (psd)， 文件头：38425053</p><p>Rich Text Format (rtf)， 文件头：7B5C727466</p><p>XML (xml)， 文件头：3C3F786D6C</p><p>HTML (html)， 文件头：68746D6C3E</p><p>Email [thorough only] (eml)， 文件头：44656C69766572792D646174653A</p><p>Outlook Express (dbx)， 文件头：CFAD12FEC5FD746F</p><p>Outlook (pst)， 文件头：2142444E</p><p>MS Word/Excel (xls.or.doc)， 文件头：D0CF11E0</p><p>MS Access (mdb)， 文件头：5374616E64617264204A</p><p>WordPerfect (wpd)， 文件头：FF575043</p><p>Adobe Acrobat (pdf)， 文件头：255044462D312E</p><p>Quicken (qdf)， 文件头：AC9EBD8F</p><p>Windows Password (pwl)， 文件头：E3828596</p><p>ZIP Archive (zip)， 文件头：504B0304</p><p>RAR Archive (rar)， 文件头：52617221</p><p>Wave (wav)， 文件头：57415645</p><p>AVI (avi)， 文件头：41564920</p><p>Real Audio (ram)， 文件头：2E7261FD</p><p>Real Media (rm)， 文件头：2E524D46</p><p>MPEG (mpg)， 文件头：000001BA</p><p>MPEG (mpg)， 文件头：000001B3</p><p>Quicktime (mov)， 文件头：6D6F6F76</p><p>Windows Media (asf)， 文件头：3026B2758E66CF11</p><p>MIDI (mid)， 文件头：4D546864</p><h3 id="GIF"><a href="#GIF" class="headerlink" title="GIF"></a>GIF</h3><p>打开图片</p><p><img src="/images/aaa.gif" alt="aaa"></p><p>有字母一闪而过</p><p>用 010editor 打开发现文件头没有问题 为 gif</p><p><img src="/images/image-20210209223344536.png" alt="image-20210209223344536"></p><p>此时用<u><strong>Namo_Gif</strong></u></p><p><img src="/images/image-20210209223840204.png" alt="image-20210209223840204"></p><p><img src="/images/image-20210209223902146.png" alt="image-20210209223902146"></p><p><img src="/images/image-20210209223927619.png" alt="image-20210209223927619"></p><p>可得 flag。</p><h3 id="png（bmp）"><a href="#png（bmp）" class="headerlink" title="png（bmp）"></a>png（bmp）</h3><p><img src="/images/pngcheck.png" alt="pngcheck"></p><p>zlib(010/pngcheck)<br>IHDR、IDAT<br>lsb 隐写 /lsb 加密（zsteg/stegsolve）<br>wbs43open（bmp）</p><p><img src="/images/image-20210209225659056.png" alt="image-20210209225659056"></p><p>使用 checkpng 检查图片结构是否存在问题，发现有一些异常的 IDAT 块。</p><p><img src="/images/image-20210209225342521.png" alt="image-20210209225342521"></p><p>可以看到 keyword</p><p><strong>BINWALK</strong></p><p>关于 binwalk 安装可以参考<a href="https://www.cnblogs.com/pcat/p/5256288.html">https://www.cnblogs.com/pcat/p/5256288.html</a></p><h3 id="JPG"><a href="#JPG" class="headerlink" title="JPG"></a>JPG</h3><p>jphide(jphs）<br>steghide<br>steghide extract -sf good- 已合并.jpg -p 123456<br>stegdetect<br>stegdetect.exe -tjopi -s1000.0 *.jpg （查看图片隐写方式）<br>stegbreak -r rules.ini -f password.txt -t p *.jpg（爆破密码）<br>outguess<br>outguess -k “key” -r 文件名 -t 保存的文件名 <br>F5-steganography<br>java Extract F5.jpg -e misc -p  11111<br> 水印(单图)(工具 +Java 盲水印)</p><h3 id="双图隐写（XOR- 脚本（三个））"><a href="# 双图隐写（XOR- 脚本（三个））" class="headerlink" title="双图隐写（XOR/ 脚本（三个））"></a>双图隐写（XOR/ 脚本（三个））</h3><h3 id="stegpy（啥都能藏 -JPG"><a href="#stegpy（啥都能藏 -JPG" class="headerlink" title="stegpy（啥都能藏.JPG"></a>stegpy（啥都能藏.JPG</h3><h3 id="silenteye- 同上"><a href="#silenteye- 同上" class="headerlink" title="silenteye(同上"></a>silenteye(同上</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;隐写图片&quot;&gt;&lt;a href=&quot;# 隐写图片&quot; class=&quot;headerlink&quot; title=&quot;隐写图片&quot;&gt;&lt;/a&gt;隐写图片 &lt;/h1&gt;&lt;p&gt;Misc 为英文 miscellaneous 的前四个字母，&lt;br&gt; 杂项、混合体、大杂烩的意思。&lt;br&gt;主要类型：&lt;b</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>黑苹果 win 双系统安装</title>
@@ -56,6 +36,28 @@
     
     
     <category term="系统" scheme="http://q2418100271.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图片隐写</title>
+    <link href="http://q2418100271.github.io/posts/55344/"/>
+    <id>http://q2418100271.github.io/posts/55344/</id>
+    <published>2021-02-01T15:48:24.000Z</published>
+    <updated>2021-02-10T02:25:53.781Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="隐写图片"><a href="# 隐写图片" class="headerlink" title="隐写图片"></a>隐写图片 </h1><p>Misc 为英文 miscellaneous 的前四个字母，<br> 杂项、混合体、大杂烩的意思。<br>主要类型：<br>1. 数据编码 / 图形密码<br>2. 图片隐写<br>3. 音频 &amp; 视频隐写</p><p>4. 流量分析<br>5. 内存取证 6. 游戏隐写.</p><h2 id="使用工具：010editor；kali"><a href="# 使用工具：010editor；kali" class="headerlink" title="使用工具：010editor；kali"></a>使用工具：010editor；kali</h2><h2 id="图片隐写分类"><a href="# 图片隐写分类" class="headerlink" title="图片隐写分类"></a>图片隐写分类 </h2><p> 属性</p><p>文件末尾藏字符串</p><p>文件包含</p><p>修改文件头</p><p>GIF</p><p>PNG(bmp)</p><p>jpg</p><p>双图隐写</p><p>stegpy</p><p>silenteye</p><h2 id="详细分类"><a href="# 详细分类" class="headerlink" title="详细分类"></a>详细分类 </h2><h3 id="右击属性"><a href="# 右击属性" class="headerlink" title="右击属性"></a> 右击属性</h3><p><img src="/images/image-20210209200549424.png" alt="image-20210209200549424"></p><h3 id="文件十六进制藏有字符串"><a href="# 文件十六进制藏有字符串" class="headerlink" title="文件十六进制藏有字符串"></a>文件十六进制藏有字符串</h3><p><img src="/images/image-20210209202404086.png" alt="image-20210209202404086"></p><h3 id="文件包含"><a href="# 文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p>binwalk 分离文件</p><p><img src="/images/image-20210209203041076.png" alt="image-20210209203041076"></p><p>可以看到效果从 271007 块偏移开始就是另一张 jpg</p><p><strong>使用 foremost 工具分离</strong></p><p>foremost 是一个基于文件文件头和尾部信息以及文件的内建数据结构恢复文件的命令行工具，win 可以下载地址，Linux 可以 <br> 通过下面命令安装 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install foremost</span><br></pre></td></tr></table></figure><p><img src="/images/image-20210209203315763.png" alt="image-20210209203315763"></p><p>安装 foremost 后你可以使用 foremost -help 查看使用帮助，这里最简单分离文件的命令为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foremost carter.jpg </span><br></pre></td></tr></table></figure><p>当我们使用这行命令后，foremost 会自动生成 output 目录存放分离出文件：</p><p><img src="/images/image-20210209203552735.png" alt="image-20210209203552735"></p><p>可以得到隐藏图片</p><h3 id="修改文件头"><a href="# 修改文件头" class="headerlink" title="修改文件头"></a>修改文件头</h3><p><img src="/images/image-20210209222755980.png" alt="image-20210209222755980"></p><p>JPEG (jpg)， 文件头：FFD8FF</p><p>PNG (png)， 文件头：89504E47</p><p>GIF (gif)， 文件头：47494638</p><p>TIFF (tif)， 文件头：49492A00</p><p>Windows Bitmap (bmp)，文件头：424D</p><p>CAD (dwg)， 文件头：41433130</p><p>Adobe Photoshop (psd)， 文件头：38425053</p><p>Rich Text Format (rtf)， 文件头：7B5C727466</p><p>XML (xml)， 文件头：3C3F786D6C</p><p>HTML (html)， 文件头：68746D6C3E</p><p>Email [thorough only] (eml)， 文件头：44656C69766572792D646174653A</p><p>Outlook Express (dbx)， 文件头：CFAD12FEC5FD746F</p><p>Outlook (pst)， 文件头：2142444E</p><p>MS Word/Excel (xls.or.doc)， 文件头：D0CF11E0</p><p>MS Access (mdb)， 文件头：5374616E64617264204A</p><p>WordPerfect (wpd)， 文件头：FF575043</p><p>Adobe Acrobat (pdf)， 文件头：255044462D312E</p><p>Quicken (qdf)， 文件头：AC9EBD8F</p><p>Windows Password (pwl)， 文件头：E3828596</p><p>ZIP Archive (zip)， 文件头：504B0304</p><p>RAR Archive (rar)， 文件头：52617221</p><p>Wave (wav)， 文件头：57415645</p><p>AVI (avi)， 文件头：41564920</p><p>Real Audio (ram)， 文件头：2E7261FD</p><p>Real Media (rm)， 文件头：2E524D46</p><p>MPEG (mpg)， 文件头：000001BA</p><p>MPEG (mpg)， 文件头：000001B3</p><p>Quicktime (mov)， 文件头：6D6F6F76</p><p>Windows Media (asf)， 文件头：3026B2758E66CF11</p><p>MIDI (mid)， 文件头：4D546864</p><h3 id="GIF"><a href="#GIF" class="headerlink" title="GIF"></a>GIF</h3><p>打开图片</p><p><img src="/images/aaa.gif" alt="aaa"></p><p>有字母一闪而过</p><p>用 010editor 打开发现文件头没有问题 为 gif</p><p><img src="/images/image-20210209223344536.png" alt="image-20210209223344536"></p><p>此时用<u><strong>Namo_Gif</strong></u></p><p><img src="/images/image-20210209223840204.png" alt="image-20210209223840204"></p><p><img src="/images/image-20210209223902146.png" alt="image-20210209223902146"></p><p><img src="/images/image-20210209223927619.png" alt="image-20210209223927619"></p><p>可得 flag。</p><h3 id="png（bmp）"><a href="#png（bmp）" class="headerlink" title="png（bmp）"></a>png（bmp）</h3><p><img src="/images/pngcheck.png" alt="pngcheck"></p><p>zlib(010/pngcheck)<br>IHDR、IDAT<br>lsb 隐写 /lsb 加密（zsteg/stegsolve）<br>wbs43open（bmp）</p><p><img src="/images/image-20210209225659056.png" alt="image-20210209225659056"></p><p>使用 checkpng 检查图片结构是否存在问题，发现有一些异常的 IDAT 块。</p><p><img src="/images/image-20210209225342521.png" alt="image-20210209225342521"></p><p>可以看到 keyword</p><p><strong>BINWALK</strong></p><p>关于 binwalk 安装可以参考<a href="https://www.cnblogs.com/pcat/p/5256288.html">https://www.cnblogs.com/pcat/p/5256288.html</a></p><h3 id="JPG"><a href="#JPG" class="headerlink" title="JPG"></a>JPG</h3><p>jphide(jphs）<br>steghide<br>steghide extract -sf good- 已合并.jpg -p 123456<br>stegdetect<br>stegdetect.exe -tjopi -s1000.0 *.jpg （查看图片隐写方式）<br>stegbreak -r rules.ini -f password.txt -t p *.jpg（爆破密码）<br>outguess<br>outguess -k “key” -r 文件名 -t 保存的文件名 <br>F5-steganography<br>java Extract F5.jpg -e misc -p  11111<br> 水印(单图)(工具 +Java 盲水印)</p><h3 id="双图隐写（XOR- 脚本（三个））"><a href="# 双图隐写（XOR- 脚本（三个））" class="headerlink" title="双图隐写（XOR/ 脚本（三个））"></a>双图隐写（XOR/ 脚本（三个））</h3><h3 id="stegpy（啥都能藏 -JPG"><a href="#stegpy（啥都能藏 -JPG" class="headerlink" title="stegpy（啥都能藏.JPG"></a>stegpy（啥都能藏.JPG</h3><h3 id="silenteye- 同上"><a href="#silenteye- 同上" class="headerlink" title="silenteye(同上"></a>silenteye(同上</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;隐写图片&quot;&gt;&lt;a href=&quot;# 隐写图片&quot; class=&quot;headerlink&quot; title=&quot;隐写图片&quot;&gt;&lt;/a&gt;隐写图片 &lt;/h1&gt;&lt;p&gt;Misc 为英文 miscellaneous 的前四个字母，&lt;br&gt; 杂项、混合体、大杂烩的意思。&lt;br&gt;主要类型：&lt;b</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="http://q2418100271.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
